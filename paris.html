@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris - Book Your Trip</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Discover Paris</h1>
+    <p>Your next adventure awaits!</p>
+  </header>
+
+  <main>
+    <section class="paris-info">
+      <h2>Welcome to Paris</h2>
+      <p>Paris, the City of Lights, offers an unforgettable experience with its iconic landmarks, rich history, and world-class cuisine. From the Eiffel Tower to the Louvre, there's so much to see and do.</p>
+
+      <div class="paris-gallery">
+        <img src="http://upload.wikimedia.org/wikipedia/commons/2/28/MG-Paris-Eiffel_Tower_3.jpg" alt="Eiffel Tower">
+        <img src="https://4.bp.blogspot.com/-0BrwVk3cwCE/UblmWjCzJOI/AAAAAAAAOyc/REsUC67rl6s/s1600/Louvre+Museum+(5).jpg" alt="Louvre Museum">
+        <img src="https://www.holidaywolf.de/wp/wp-content/uploads/2021/05/champs-elysees.jpg" alt="Champs-Élysées">
+      </div>
+    </section>
+
+    <!-- Paris Booking Form -->
+    <section class="booking-form">
+      <h2>Book Your Paris Trip</h2>
+      <form>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" value="Paris" disabled>
+
+        <label for="date">Choose Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" max="10">
+
+        <label for="price-range">Price Range:</label>
+        <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100">
+        <p id="price-display">$2500</p>
+
+        <a href="thankyou.html"><button>Book Now</button></a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Travel World. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

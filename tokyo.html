@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo - Book Your Trip</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Discover Tokyo</h1>
+    <p>The vibrant heart of Japan!</p>
+  </header>
+
+  <main>
+    <section class="tokyo-info">
+      <h2>Welcome to Tokyo</h2>
+      <p>Tokyo is a blend of futuristic architecture and traditional culture. From bustling shopping streets to serene temples, Tokyo offers a unique experience for every traveler.</p>
+
+      <div class="tokyo-gallery">
+        <img src="https://cdn-images-1.medium.com/max/2000/1*Zy_ygabcpo2VMPECgt4lCQ.jpeg" alt="Tokyo Tower">
+        <img src="https://www.kcpinternational.com/wp-content/uploads/2023/04/Shibuya-Crossing.jpg" alt="Shibuya Crossing">
+        <img src="https://a.cdn-hotels.com/gdcs/production65/d826/d42a8ade-b32e-436a-a51d-a9c32630d4f8.jpg" alt="Tokyo Temple">
+      </div>
+    </section>
+
+    <!-- Tokyo Booking Form -->
+    <section class="booking-form">
+      <h2>Book Your Tokyo Trip</h2>
+      <form>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" value="Tokyo" disabled>
+
+        <label for="date">Choose Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" max="10">
+
+        <label for="price-range">Price Range:</label>
+        <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100">
+        <p id="price-display">$2500</p>
+
+        <a href="thankyou.html"><button>Book Now</button></a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Travel World. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

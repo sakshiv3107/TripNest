@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Thank You for Your Booking!</h1>
+    <p>Your booking has been confirmed.</p>
+  </header>
+
+  <main>
+    <section class="confirmation-message">
+      <h2>Your booking is confirmed!</h2>
+      <p>We are excited to have you join us on your upcoming adventure. Here are your booking details:</p>
+      
+      <!-- Booking Details -->
+      <div class="booking-details">
+        <p><strong>Destination:</strong> <span id="destination-name">Paris</span></p>
+        <p><strong>Booking Date:</strong> <span id="booking-date">2024-12-20</span></p>
+        <p><strong>Number of Guests:</strong> <span id="guest-count">2</span></p>
+        <p><strong>Price:</strong> <span id="booking-price">$1800</span></p>
+      </div>
+
+      <div class="thank-you-note">
+        <p>Thank you for choosing us! We look forward to making your trip unforgettable.</p>
+        <button onclick="window.location.href='index.html'">Return to Home Page</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 Travel World. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
