@@ -18,7 +18,7 @@ header{
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.5rem;
-  background-color: #004d40;
+  background-color: #00796b;
   color: #f3f2c8;
 }
 
@@ -155,7 +155,7 @@ header{
   color: #00796b;
 }
 
-.card button {
+.card button,.thank-you-note button {
   background: #00796b;
   color: white;
   padding: 10px 20px;
@@ -166,7 +166,7 @@ header{
   transition: background 0.3s ease;
 }
 
-.card button:hover {
+.card button:hover,.thank-you-note button:hover {
   background: #004d40;
 }
 
@@ -223,8 +223,8 @@ header{
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
-  justify-content: center;
-  align-items:center;
+  position: relative;
+  left: 240px;
 }
 
 .booking-form button:hover {
@@ -329,8 +329,8 @@ header{
 }
 
 .footer .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   
   transition: transform 0.3s ease;
 }
@@ -338,3 +338,12 @@ header{
 .footer .social-icons img:hover {
   transform: scale(1.2);
 }
+.confirmation-message{
+  height: 393px;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
