@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Booking Page</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <h1>Explore the World</h1>
-    <p>Book your next adventure now!</p>
-  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover Your Next Adventure</h1>
+      <p>Explore breathtaking destinations at unbeatable prices.</p>
+      <a href="#destinations" class="btn-primary">Start Exploring</a>
+    </div>
+  </section>
 
+  <!-- Destinations Section -->
   <main>
-    <!-- Destination Cards -->
-    <section class="destinations">
+    <section id="destinations" class="destinations">
       <h2>Popular Destinations</h2>
       <div class="cards">
         <div class="card">
@@ -62,13 +67,49 @@
         <button type="submit">Search</button>
       </form>
     </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p>"Booking was easy, and the trip was unforgettable!"</p>
+          <span>- Emily R.</span>
+        </div>
+        <div class="testimonial">
+          <p>"Great prices and excellent customer service!"</p>
+          <span>- John D.</span>
+        </div>
+        <div class="testimonial">
+          <p>"Maldives was a dream come true, thanks to this site."</p>
+          <span>- Sarah K.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for exclusive deals and travel tips.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn-secondary">Subscribe</button>
+      </form>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <p>© 2024 Travel World. All rights reserved.</p>
+    <div class="footer-content">
+      <p>© 2024 Travel World. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
