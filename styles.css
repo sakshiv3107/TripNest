@@ -15,13 +15,13 @@ body {
   background-color: #f5f5f5;
 }
 main{
-  background:#f3f2c8;
+  background:white;
 }
 header{
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.5rem;
-  background-color: #00796b;
+  background-color: #007BFF;
   color: #f3f2c8;
 }
 
@@ -36,6 +36,7 @@ header{
   justify-content: space-between;
   position: fixed;
   top: 0px;
+  padding: 0 10%;
 }
 /* box 1 */
 
@@ -52,7 +53,7 @@ header{
 }
 
 .logo{
-  background-image: url("travel-logo.png");
+  background-image: url("/images/travel-logo.png");
   background-size: 6.5em;
   background-position: center;
   height: 100%;
@@ -65,61 +66,26 @@ header{
 }
 
 /* box 3 */
-.nav-search{
-  display: flex;
-  justify-content: space-evenly;
-  height:2.5rem;
-  border-radius: 4px;
-  width: 50%;
-  background-color: rgb(251, 251, 251);
-}
-.nav-search:hover{
-  border: 2.5px solid #00796b;
-}
-.search-amazon{
-  border: none;
-  width: 100%;
-  font-size: 0.8rem;
-  margin-left: 1rem;
-  text-wrap: wrap;
-  
-}
-.search-icon{
-  background-color: #03a08ecd;
-  width: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  font-size: 1.2rem;
-  color: #0f1111;
-}
-.search-icon:hover{
-  background-color: #00796b;
-}
-/* box 4 */
 
-span{
-  font-size: 0.9rem;
-}
 .navbar a{
   font-size: 0.9rem;
-  margin-top: 20px;
   text-decoration: none;
   color: white;
   transition: all 0.2s ease-in-out 0.1s;
+  margin: 0 15px;
+  font-weight: 400;
 }
 .navbar a:hover{
-  color: #07dcc3;
+  color: #4273f1;
   font-size: 1rem;
+  text-decoration: underline;
 }
 .nav-signin{
   margin-right: 10px;
 }
 #hero {
   height: 100vh;
-  background: url('https://i.pinimg.com/736x/1b/2f/9d/1b2f9d3022c58b3ba5a99128df71984d.jpg')  no-repeat ;
+  background: url('/images/hero-img.jpg')  no-repeat ;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -146,7 +112,7 @@ span{
 
 .btn-primary {
   padding: 10px 20px;
-  background: #00796b;
+  background: #007BFF;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -154,7 +120,7 @@ span{
 }
 
 .btn-primary:hover {
-  background: #004d40;
+  background: #035bb9;
 }
 
 
@@ -182,7 +148,7 @@ span{
 .tokyo-info h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #00796b;
+  color: #007BFF;
 }
 
 /* Gallery Sections */
@@ -216,7 +182,7 @@ span{
 .destinations h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #00796b;
+  color: #007BFF;
 }
 
 .cards {
@@ -247,11 +213,11 @@ span{
 }
 
 .card p {
-  color: #00796b;
+  color: #007BFF;
 }
 
 .card button,.thank-you-note button {
-  background: #00796b;
+  background: #007BFF;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -262,7 +228,7 @@ span{
 }
 
 .card button:hover,.thank-you-note button:hover {
-  background: #004d40;
+  background: #0153ac;
 }
 
 /* Booking Form */
@@ -279,7 +245,7 @@ span{
 .booking-form h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #00796b;
+  color: #007BFF;
 }
 
 .booking-form form {
@@ -307,12 +273,12 @@ span{
 #price-display {
   text-align: center;
   font-weight: bold;
-  color: #00796b;
+  color: #007BFF;
 }
 
 .booking-form button {
   padding: 10px;
-  background: #00796b;
+  background: #007BFF;
   color: white;
   border: none;
   border-radius: 5px;
@@ -328,13 +294,13 @@ span{
 
 /* Testimonials Section */
 .testimonials {
-  background:  #f3f2c8;
+  background:  white;
   padding: 40px 20px;
   text-align: center;
 }
 
 .testimonials h2 {
-  color: #00796b;
+  color: #007BFF;
   margin-bottom: 20px;
 }
 
@@ -361,12 +327,12 @@ span{
 
 .testimonial span {
   font-weight: bold;
-  color: #00796b;
+  color: #007BFF;
 }
 
 /* Newsletter Section */
 .newsletter {
-  background: #00796b;
+  background: #0153ac;
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -396,7 +362,7 @@ span{
 
 .newsletter button {
   background: white;
-  color: #00796b;
+  color: #007BFF;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -410,7 +376,7 @@ span{
 
 /* Footer */
 .footer {
-  background: #00796b;
+  background: #0153ac;
   color: white;
   padding: 20px;
   text-align: center;
@@ -440,5 +406,191 @@ span{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+
+/* Header */
+.explore-header {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.hero-small {
+  text-align: center;
+  padding: 30px;
+}
+
+.hero-small h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-small p {
+  font-size: 1.2em;
+}
+
+/* Categories Section */
+.categories {
+  padding: 50px 10%;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.category-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1;
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.category-card h3 {
+  margin: 15px;
+  font-size: 1.5em;
+}
+
+.category-card p {
+  margin: 0 15px 15px;
+  color: #555;
+}
+
+.category-card .btn-primary {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  color: white;
+  background: #007BFF;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.category-card .btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Popular Tours Section */
+.popular {
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.popular h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.tour-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  flex: 1;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-card h3 {
+  margin: 15px;
+  font-size: 1.5em;
+}
+
+.tour-card p {
+  margin: 0 15px 15px;
+  color: #555;
+}
+
+.tour-card .btn-primary {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px 20px;
+  color: white;
+  background: #007BFF;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.tour-card .btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Plan Your Trip Section */
+.plan-your-trip {
+  padding: 50px 10%;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.plan-your-trip h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.plan-your-trip p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.trip-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.trip-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.trip-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.trip-form .btn-primary {
+  padding: 10px 20px;
+  color: white;
+  background: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.trip-form .btn-primary:hover {
+  background: #0056b3;
 }
 

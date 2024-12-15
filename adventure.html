@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div id="nav-logo" class="logo"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="adventure.html">Adventure</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Adventure Hero Section -->
+    <section id="adventure-hero" style="background: url('adventure-hero.jpg') no-repeat center center/cover; height: 60vh; display: flex; align-items: center; justify-content: center;">
+        <div class="hero-content">
+            <h1>Adventure Awaits</h1>
+            <p>Explore thrilling adventures and unforgettable experiences.</p>
+        </div>
+    </section>
+
+    <!-- Adventure Activities Section -->
+    <section class="destinations">
+        <h2>Popular Adventure Activities</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="hiking.jpg" alt="Hiking">
+                <h3>Hiking</h3>
+                <p>Discover scenic trails and breathtaking landscapes.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <img src="skydiving.jpg" alt="Skydiving">
+                <h3>Skydiving</h3>
+                <p>Experience the thrill of freefalling from the skies.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <img src="rafting.jpg" alt="Rafting">
+                <h3>Rafting</h3>
+                <p>Ride the rapids and conquer the wild waters.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Tips Section -->
+    <section class="testimonials">
+        <h2>Adventure Tips</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <p>"Always plan your adventure carefully and pack essential gear."</p>
+                <span>- Experienced Traveler</span>
+            </div>
+            <div class="testimonial">
+                <p>"Safety first! Know your limits and follow the guides."</p>
+                <span>- Adventure Enthusiast</span>
+            </div>
+            <div class="testimonial">
+                <p>"Document your journey, but also live in the moment."</p>
+                <span>- Travel Blogger</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Booking Form -->
+    <section class="booking-form">
+        <h2>Book Your Adventure</h2>
+        <form>
+            <label for="activity">Choose an Activity:</label>
+            <select id="activity" name="activity">
+                <option value="hiking">Hiking</option>
+                <option value="skydiving">Skydiving</option>
+                <option value="rafting">Rafting</option>
+            </select>
+
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="participants">Number of Participants:</label>
+            <input type="number" id="participants" name="participants" min="1">
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Adventure Co. All Rights Reserved.</p>
+        <div class="social-icons">
+            <img src="facebook-icon.png" alt="Facebook">
+            <img src="instagram-icon.png" alt="Instagram">
+            <img src="twitter-icon.png" alt="Twitter">
+        </div>
+    </footer>
+</body>
+</html>
