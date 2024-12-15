@@ -27,7 +27,7 @@ header{
 
 /* Hero Section */
 .navbar{
-  height: 60vh;
+  height: 3.5rem;
   width: 100%;
   background-color: #0f111186;
   color: white;
@@ -44,10 +44,11 @@ header{
 }
 
 #nav-logo{
-  height: 50vh;
+  height: 50px;
   width: 180px;
   display: flex;
   margin-right: 5px;
+
 }
 
 .logo{
@@ -56,7 +57,7 @@ header{
   background-position: center;
   height: 100%;
   width: 100%;
-  margin-top:7px ;
+  /* margin-top:7px ; */
 }
 #nav-logo p{
   font-size: 1.7rem;
@@ -67,7 +68,7 @@ header{
 .nav-search{
   display: flex;
   justify-content: space-evenly;
-  height:40vh;
+  height:2.5rem;
   border-radius: 4px;
   width: 50%;
   background-color: rgb(251, 251, 251);
@@ -80,6 +81,7 @@ header{
   width: 100%;
   font-size: 0.8rem;
   margin-left: 1rem;
+  text-wrap: wrap;
   
 }
 .search-icon{
