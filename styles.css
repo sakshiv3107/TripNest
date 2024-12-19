@@ -65,7 +65,6 @@ header{
   margin-top: 5px;
 }
 
-/* box 3 */
 
 .navbar a{
   font-size: 0.9rem;
@@ -83,6 +82,7 @@ header{
 .nav-signin{
   margin-right: 10px;
 }
+
 #hero {
   height: 100vh;
   background: url("/images/hero-img.jpg")  no-repeat ;
@@ -371,50 +371,19 @@ header{
 }
 
 .newsletter button:hover {
-  background: #f5f5f5;
-}
-
-/* Footer */
-.footer {
-  background: #0153ac;
+  background: #032c58;
   color: white;
-  padding: 20px;
-  text-align: center;
 }
 
-.footer .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.footer .social-icons img {
-  width: 40px;
-  height: 40px;
-  
-  transition: transform 0.3s ease;
-}
-
-.footer .social-icons img:hover {
-  transform: scale(1.2);
-}
-.confirmation-message{
-  height: 393px;
-  font-size: 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
+/*START EXPLORING PAGE*/
 
 /* Header */
 .explore-header {
   background-color: #007BFF;
   color: white;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
+  height: 200px;
 }
 .hero-small {
   text-align: center;
@@ -455,6 +424,12 @@ header{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
   flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .category-card img {
@@ -473,6 +448,7 @@ header{
   margin: 0 15px 15px;
   color: #555;
 }
+
 
 .category-card .btn-primary {
   display: inline-block;
@@ -512,6 +488,13 @@ header{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
   flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.tour-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .tour-card img {
@@ -547,7 +530,7 @@ header{
 /* Plan Your Trip Section */
 .plan-your-trip {
   padding: 50px 10%;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -565,6 +548,8 @@ header{
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  background: #dcdbdb;
+  padding: 5%;
 }
 
 .trip-form label {
@@ -588,9 +573,43 @@ header{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  position: relative;
+  left: 45%;
 }
 
 .trip-form .btn-primary:hover {
   background: #0056b3;
 }
+/* Footer */
+.footer {
+  background: #0153ac;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+.confirmation-message{
+  height: 393px;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
