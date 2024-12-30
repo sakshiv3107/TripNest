@@ -12,37 +12,22 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
 }
-main{
-  background:white;
-}
-header{
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.5rem;
-  background-color: #007BFF;
-  color: #f3f2c8;
-}
-
-/* Hero Section */
+/*Navbar*/
 .navbar{
-  height: 3.5rem;
+  height: 4.5rem;
   width: 100%;
-  background-color: #0f111186;
-  color: white;
+  background-color: #f7f1e9eb;
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 0px;
-  padding: 0 10%;
+  padding: 0 2%;
   z-index: 1000;
-}
-/* box 1 */
-
-.border{
-  border: 1.5px solid transparent;
+  box-shadow: 0px 0px 50px 0px #555;
 }
 
 #nav-logo{
@@ -68,7 +53,7 @@ header{
 .navbar a{
   font-size: 0.9rem;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   transition: all 0.2s ease-in-out 0.1s;
   margin: 0 15px;
   font-weight: 400;
@@ -76,15 +61,31 @@ header{
 .navbar a:hover{
   color: #4273f1;
   font-size: 1rem;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
-.nav-signin{
-  margin-right: 10px;
+
+header{
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  /* background-color: #007BFF; */
+  /* color: #000000; */
+  /* height: 0vh; */
 }
+
+header .heading{
+  padding-top: 8%;
+  color: #016fe5;
+}
+.heading p{
+  color: black;
+}
+/*HOME PAGE*/
+/* Hero Section */
 
 #hero {
   height: 100vh;
-  background: url("/images/hero-img.jpg")  no-repeat ;
+  background: url("/images/hero_img.jpg")  no-repeat ;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -94,7 +95,7 @@ header{
 }
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.637);
   padding: 20px;
   border-radius: 10px;
 }
@@ -122,174 +123,6 @@ header{
   background: #035bb9;
 }
 
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.paris-info,
-.maldives-info,
-.tokyo-info {
-  text-align: center;
-  padding: 20px;
-}
-
-.paris-info p,
-.maldives-info p,
-.tokyo-info p {
-  margin-bottom: 1.5rem;
-}
-
-.paris-info h2,
-.maldives-info h2,
-.tokyo-info h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #007BFF;
-}
-
-/* Gallery Sections */
-.paris-gallery,
-.maldives-gallery,
-.tokyo-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  height: 350px;
-  
-}
-
-.paris-gallery img,
-.maldives-gallery img,
-.tokyo-gallery img {
-  width: 300px;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 10px;
-  height: 350px;
-}
-
-
-/* Destinations Section */
-.destinations {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.destinations h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #007BFF;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
-  margin: 15px 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  color: #007BFF;
-}
-
-.card button,.thank-you-note button {
-  background: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.card button:hover,.thank-you-note button:hover {
-  background: #0153ac;
-}
-
-/* Booking Form */
-.booking-form {
-  background: white;
-  padding: 40px 20px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.booking-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #007BFF;
-}
-
-.booking-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.booking-form label {
-  font-weight: bold;
-}
-
-.booking-form input,
-.booking-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-}
-
-.booking-form input[type="range"] {
-  cursor: pointer;
-}
-
-#price-display {
-  text-align: center;
-  font-weight: bold;
-  color: #007BFF;
-}
-
-.booking-form button {
-  padding: 10px;
-  background: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  position: relative;
-  left: 240px;
-}
-
-.booking-form button:hover {
-  background: #004d40;
-}
 
 /* Testimonials Section */
 .testimonials {
@@ -376,14 +209,6 @@ header{
 
 /*START EXPLORING PAGE*/
 
-/* Header */
-.header {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-  height: 200px;
-}
 .hero-small {
   text-align: center;
   padding: 30px;
@@ -400,7 +225,7 @@ header{
 
 /* Categories Section */
 .categories {
-  padding: 50px 10%;
+  padding: 2% 5%;
   background-color: #f8f9fa;
   text-align: center;
 }
@@ -433,7 +258,7 @@ header{
 
 .category-card img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   object-position: center;
 }
@@ -457,127 +282,73 @@ header{
   background: #007BFF;
   border-radius: 5px;
   text-decoration: none;
+  border: none;
 }
 
 .category-card .btn-primary:hover {
   background: #0056b3;
 }
 
-/* Popular Tours Section */
-.popular {
-  padding: 50px 10%;
-  text-align: center;
-}
 
-.popular h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.tour-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.tour-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  flex: 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.tour-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.tour-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.tour-card h3 {
-  margin: 15px;
-  font-size: 1.5em;
-}
-
-.tour-card p {
-  margin: 0 15px 15px;
-  color: #555;
-}
-
-.tour-card .btn-primary {
-  display: inline-block;
-  margin: 15px;
-  padding: 10px 20px;
-  color: white;
-  background: #007BFF;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.tour-card .btn-primary:hover {
-  background: #0056b3;
-}
-
-/* Plan Your Trip Section */
-.plan-your-trip {
-  padding: 50px 10%;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.plan-your-trip h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.plan-your-trip p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.trip-form {
+/* Booking Form */
+.booking-form {
+  background: #e4e4e4ed;
+  padding: 40px 20px;
+  margin: 20px auto;
+  width: 90%;
   max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-  background: #dcdbdb;
-  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.trip-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.trip-form input {
-  width: 100%;
-  padding: 10px;
+.booking-form h2 {
+  text-align: center;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  color: #007BFF;
 }
 
-.trip-form .btn-primary {
-  padding: 10px 20px;
-  color: white;
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form label {
+  font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.booking-form input[type="range"] {
+  cursor: pointer;
+}
+
+#price-display {
+  text-align: center;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.booking-form button {
+  padding: 10px;
   background: #007BFF;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
   position: relative;
-  left: 45%;
+  left: 240px;
 }
 
-.trip-form .btn-primary:hover {
-  background: #0056b3;
+.booking-form button:hover {
+  background: #004d40;
 }
 /* Footer */
 .footer {
@@ -612,3 +383,4 @@ header{
   flex-direction: column;
   justify-content: center;
 }
+

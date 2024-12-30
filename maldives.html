@@ -15,39 +15,48 @@
       </div>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="#categories">CATEGORIES</a>
-        <a href="#popular">POPULAR TOURS</a>
+        <a href="/start_exploring.html">EXPLORING</a>
+        <a href="#categories">POPULAR PLACES</a>
         <a href="#plan">PLAN YOUR TRIP</a>
       </nav>
     </div>
-    <div class="hero-small">
+    <div class="heading">
       <h1>Discover Maldives</h1>
-      <p>Experience paradise on Earth!</p>
+      <p>Maldives is a tropical paradise known for its crystal-clear waters, luxurious resorts, and stunning coral reefs. It is the perfect place for a relaxing beach holiday.</p>
     </div>
   </header>
 
 
   <main>
-    <section class="maldives-info">
-      <h2>Welcome to Maldives</h2>
-      <p>Maldives is a tropical paradise known for its crystal-clear waters, luxurious resorts, and stunning coral reefs. It is the perfect place for a relaxing beach holiday.</p>
 
-      <div class="maldives-gallery">
-        <div class="card">
-          <img src="https://www.riu.com/blog/wp-content/uploads/2020/09/riu-maldivas-2048x1365.jpg" alt="Maldives Beach">
+    <section id="categories" class="categories">
+      <h2>Popular Places</h2>
+      <div class="category-cards">
+        <div class="category-card">
+          <img src="/images/Maldives Beach.avif" alt="Maldives Beach">
+          <h3>Maldives Beach</h3>
+          <p> Calling all beach bums: the Maldives is a region famous for its palm-fringed desert islands, most of them surrounded by gin-clear water teeming with tropical fish. </p>
+          <a href="#plan" class="btn-primary">Book Now</a>
         </div>
-        <div class="card">
-          <img src="https://i.pinimg.com/originals/2a/31/56/2a31569647400adeada711206aa8ce0c.jpg" alt="Maldives Resort">
+        <div class="category-card">
+          <img src="/images/Maldives Resort.jpg" alt="Maldives Resort">
+          <h3>Maldives Resort</h3>
+          <p> Every guest wants to pick the best resort for the chosen budget and there are 156 islands that look quite similar. This resort collection will make decision making easier. </p>
+          <a href="#plan" class="btn-primary">Book Now</a>
         </div>
-        <div class="card">
-          <img src="https://wallpaperaccess.com/full/2810443.jpg" alt="Maldives Sunset">
-        </div>       
+        <div class="category-card">
+          <img src="/images/Maldives Sunset.jpg" alt="Maldives Sunset">
+          <h3>Maldives Sunset</h3>
+          <p>Learn how to capture and enjoy the stunning sunsets in the Maldives, from west-facing beaches to luxurious resorts.</p>
+          <a href="#plan" class="btn-primary">Book Now</a>
+        </div>
       </div>
-    </section>
+      </section>
+
 
     <!-- Maldives Booking Form -->
-    <section class="booking-form">
-      <h2>Book Your Maldives Trip</h2>
+    <section class="booking-form" id="plan" >
+      <h2 >Book Your Maldives Trip</h2>
       <form>
         <label for="destination">Destination:</label>
         <input type="text" id="destination" name="destination" value="Maldives" disabled>
@@ -66,6 +75,17 @@
       </form>
     </section>
   </main>
+  <!-- Newsletter Section -->
+  <section class="newsletter" id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for exclusive deals and travel tips.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn-secondary">Subscribe</button>
+    </form>
+  </section>
+</main>
+
 
   <!-- Footer -->
   <footer class="footer">

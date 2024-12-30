@@ -15,41 +15,55 @@
       </div>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="#categories">CATEGORIES</a>
-        <a href="#popular">POPULAR TOURS</a>
+        <a href="/start_exploring.html">EXPLORING</a>
+        <a href="#categories">POPULAR PLACES</a>
         <a href="#plan">PLAN YOUR TRIP</a>
       </nav>
     </div>
-    <div class="hero-small">
+    <div class="heading">
       <h1>Discover Tokyo</h1>
-      <p>The vibrant heart of Japan!</p>
+      <p>Tokyo is a blend of futuristic architecture and traditional culture. From bustling shopping streets to serene temples, Tokyo offers a unique experience for every traveler.</p>
     </div>
   </header>
 
   <main>
-    <section class="tokyo-info">
-      <h2>Welcome to Tokyo</h2>
-      <p>Tokyo is a blend of futuristic architecture and traditional culture. From bustling shopping streets to serene temples, Tokyo offers a unique experience for every traveler.</p>
-
-      <div class="tokyo-gallery">
-        <img src="https://cdn-images-1.medium.com/max/2000/1*Zy_ygabcpo2VMPECgt4lCQ.jpeg" alt="Tokyo Tower">
-        <img src="https://www.kcpinternational.com/wp-content/uploads/2023/04/Shibuya-Crossing.jpg" alt="Shibuya Crossing">
-        <img src="https://a.cdn-hotels.com/gdcs/production65/d826/d42a8ade-b32e-436a-a51d-a9c32630d4f8.jpg" alt="Tokyo Temple">
+    <section id="categories" class="categories">
+      <h2>Popular Places</h2>
+      <div class="category-cards">
+        <div class="category-card">
+          <img src="/images/Tokyo Tower.jpg" alt="Tokyo Tower">
+          <h3>Tokyo Tower</h3>
+          <p> At 332.9 meters It is a lattice tower inspired by the Eiffel Tower, and is painted white and international orange to comply with air safety regulations.</p>
+          <a href="#plan" class="btn-primary">Book Now</a>
+        </div>
+        <div class="category-card">
+          <img src="/images/Shibuya Crossing.jpg" alt="Shibuya Crossing">
+          <h3>Shibuya Crossing</h3>
+          <p>The only place where 7 cross roads come together and the lights all turn red at the same time. Thousands of pedestrians then all cross at the same time. Just amazing.
+          </p>
+          <a href="#plan" class="btn-primary">Book Now</a>
+        </div>
+        <div class="category-card">
+          <img src="/images/Tokyo-temple.avif" alt="Tokyo Temple">
+          <h3>Tokyo Temple</h3>
+          <p>The hustling and bustling capital city of Tokyo attracts many tourists for its neon lights and nightlife, but it is also full of culture in the forms of shrines and temples.</p>
+          <a href="#plan" class="btn-primary">Book Now</a>
+        </div>
       </div>
-    </section>
+      </section>
 
     <!-- Tokyo Booking Form -->
-    <section class="booking-form">
+    <section class="booking-form" id="plan">
       <h2>Book Your Tokyo Trip</h2>
       <form>
         <label for="destination">Destination:</label>
         <input type="text" id="destination" name="destination" value="Tokyo" disabled>
 
         <label for="date">Choose Date:</label>
-        <input type="date" id="date" name="date">
+        <input type="date" id="date" name="date" required>
 
         <label for="guests">Number of Guests:</label>
-        <input type="number" id="guests" name="guests" min="1" max="10">
+        <input type="number" id="guests" name="guests" min="1" max="10" required>
 
         <label for="price-range">Price Range:</label>
         <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100">
@@ -59,6 +73,18 @@
       </form>
     </section>
   </main>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter" id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for exclusive deals and travel tips.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn-secondary">Subscribe</button>
+    </form>
+  </section>
+</main>
+
 
   <!-- Footer -->
   <footer class="footer">

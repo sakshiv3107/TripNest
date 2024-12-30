@@ -18,17 +18,41 @@
       <nav>
         <a href="index.html">HOME</a>
         <a href="#categories">CATEGORIES</a>
-        <a href="#popular">POPULAR TOURS</a>
+        <a href="#Popular">POPULAR TOURS</a>
         <a href="#plan">PLAN YOUR TRIP</a>
       </nav>
     </div>
-    <div class="hero-small">
+    <div class="heading">
       <h1>Start Exploring</h1>
       <p>Find the perfect destination for your next journey.</p>
     </div>
   </header>
 
   <!-- Categories Section -->
+
+  <section id="categories" class="categories">
+    <h2 id="Popular">Popular Destinations</h2>
+    <div class="category-cards" >
+      <div class="category-card" >
+        <img src="http://wallpapercave.com/wp/FAX9Jf5.jpg" alt="Paris" >
+        <h3>Paris</h3>
+        <p>Starting from $899</p>
+        <a href="paris.html"><button class="btn-primary">Explore More</button></a>
+      </div>
+      <div class="category-card">
+        <img src="https://wallpaperaccess.com/full/465754.jpg" alt="Maldives">
+        <h3>Maldives</h3>
+        <p>Starting from $1299</p>
+        <a href="maldives.html"><button class="btn-primary">Explore More</button></a>
+      </div>
+      <div class="category-card">
+        <img src="https://wallpaperaccess.com/full/18532.jpg" alt="Tokyo">
+        <h3>Tokyo</h3>
+        <p>Starting from $999</p>
+        <a href="tokyo.html"><button class="btn-primary">Explore More</button></a>
+      </div>
+    </div>
+  </section>
   <section id="categories" class="categories">
     <h2>Explore by Category</h2>
     <div class="category-cards">
@@ -53,50 +77,66 @@
     </div>
   </section>
 
+
+
   <!-- Popular Tours Section -->
-  <section id="popular" class="popular">
+  <section id="categories" class="categories">
     <h2>Popular Tours</h2>
-    <div class="tour-cards">
-      <div class="tour-card">
+    <div class="category-cards">
+      <div class="category-card">
         <img src="/images/antelope-canyon-guided-tour-card.jpg" alt="Grand Canyon">
         <h3>Grand Canyon Adventure</h3>
         <p>Price: $499</p>
-        <a href="grandcanyon.html" class="btn-primary">Book Now</a>
+        <a href="#plan" class="btn-primary">Book Now</a>
       </div>
-      <div class="tour-card">
+      <div class="category-card">
         <img src="/images/northern_light.avif" alt="Northern Lights">
         <h3>Northern Lights Escape</h3>
         <p>Price: $999</p>
-        <a href="northernlights.html" class="btn-primary">Book Now</a>
+        <a href="#plan" class="btn-primary">Book Now</a>
       </div>
-      <div class="tour-card">
+      <div class="category-card">
         <img src="/images/safari.avif" alt="Sahara Safari">
         <h3>Sahara Desert Safari</h3>
         <p>Price: $799</p>
-        <a href="saharasafari.html" class="btn-primary">Book Now</a>
+        <a href="#plan" class="btn-primary">Book Now</a>
       </div>
     </div>
   </section>
 
+
   <!-- Plan Your Trip Section -->
-  <section id="plan" class="plan-your-trip">
-    <h2>Plan Your Trip</h2>
-    <p>Customize your journey with ease. Choose your preferences and let us handle the rest!</p>
-    <form class="trip-form">
-      <label for="destination">Destination</label>
-      <input type="text" id="destination" name="destination" placeholder="Enter destination">
+  <section class="booking-form" id="plan">
+    <h2>Book Your Trip</h2>
+    <form>
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" value=""  required >
 
-      <label for="travel-dates">Travel Dates</label>
-      <input type="date" id="travel-dates" name="travel-dates">
+      <label for="date">Choose Date:</label>
+      <input type="date" id="date" name="date" min="1-01-2025" required>
 
-      <label for="budget">Budget</label>
-      <input type="number" id="budget" name="budget" placeholder="Enter your budget">
-      <a href="thankyou.html"><button class="btn-primary">Book Now</button></a>
-      <!-- <a href="thankyou.html">
-        <button type="submit" class="btn-primary">Submit</button>
-      </a>  -->
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+      <label for="price-range">Price Range:</label>
+      <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100" required>
+      <p id="price-display">$2500</p>
+
+      <a href="thankyou.html"><button class="book_button">Book Now</button></a>
     </form>
   </section>
+</main>
+  <!-- Newsletter Section -->
+  <section class="newsletter" id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for exclusive deals and travel tips.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn-secondary">Subscribe</button>
+    </form>
+  </section>
+</main>
+
 
   <footer class="footer">
     <div class="footer-content">
