@@ -3,49 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking Confirmation</title>
+  <title>Thank You</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    .thank-you-container {
+
+      max-width: 800px;
+      padding: 20px 20px;
+      margin: 5% 20%;
+      /* margin-left: 30%; */
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #28a745;
+    }
+    .details {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .details p {
+      margin: 10px 0;
+    }
+    .details span {
+      font-weight: bold;
+    }
+    .details button{
+      text-decoration: none ;
+      color: #f8f9fa;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="navbar">
-      <div id="nav-logo">
-        <div class="logo"></div>
-        <p>TripNest</p>
-      </div>
-      <nav>
-        <a href="index.html">HOME</a>
-        <a href="#categories">CATEGORIES</a>
-        <a href="#popular">POPULAR TOURS</a>
-        <a href="#plan">PLAN YOUR TRIP</a>
-      </nav>
+<header class="header">
+  <div class="navbar">
+    <div id="nav-logo">
+      <div class="logo"></div>
+      <p>TripNest</p>
     </div>
-    <div class="heading">
-      <h1>Thank You for Your Booking!</h1>
-    <p>Your booking has been confirmed.</p>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="/start_exploring.html">EXPLORING</a>
+      <a href="#categories">POPULAR PLACES</a>
+      <a href="#plan">PLAN YOUR TRIP</a>
+    </nav>
+  </div>
+</header>
+  <div class="thank-you-container">
+    <h1>Thank You for Your Booking!</h1>
+    <p>Your booking details are as follows:</p>
+    <div class="details">
+      <p><span>Destination:</span> <span id="destination-name"></span></p>
+      <p><span>Date:</span> <span id="booking-date"></span></p>
+      <p><span>Number of Guests:</span> <span id="guest-count"></span></p>
+      <p><span>Price:</span> <span id="booking-price"></span></p>
     </div>
-  </header>
+    <a href="index.html"><button class="btn-primary">Explore More</button></a>
+  </div>
 
-  <main>
-    <section class="confirmation-message">
-      <h2>Your booking is confirmed!</h2>
-      <p>We are excited to have you join us on your upcoming adventure. Here are your booking details:</p>
-      
-      <!-- Booking Details -->
-      <div class="booking-details">
-        <p><strong>Destination:</strong> <span id="destination-name">Paris</span></p>
-        <p><strong>Booking Date:</strong> <span id="booking-date">2024-12-20</span></p>
-        <p><strong>Number of Guests:</strong> <span id="guest-count">5</span></p>
-        <p><strong>Price:</strong> <span id="booking-price">$2500</span></p>
-      </div>
+  <!-- Newsletter Section -->
+  <section class="newsletter" id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for exclusive deals and travel tips.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn-secondary">Subscribe</button>
+    </form>
+  </section>
+</main>
 
-      <div class="thank-you-note">
-        <p>Thank you for choosing us! We look forward to making your trip unforgettable.</p>
-        <button onclick="window.location.href='index.html'">Return to Home Page</button>
-      </div>
-    </section>
-  </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <p>© 2024 Travel World. All rights reserved.</p>
@@ -56,12 +92,11 @@
       </div>
     </div>
   </footer>
-
-
-
-
-  <script src="script.js"></script>
-
-
+  <script src="script.js">
+        document.getElementById("destination-name").textContent = localStorage.getItem("destination") || "N/A";
+    document.getElementById("booking-date").textContent = localStorage.getItem("date") || "N/A";
+    document.getElementById("guest-count").textContent = localStorage.getItem("guests") || "N/A";
+    document.getElementById("booking-price").textContent = `$${localStorage.getItem("price") || "0"}`;
+  </script>
 </body>
 </html>
