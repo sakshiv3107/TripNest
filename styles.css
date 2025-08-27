@@ -13,25 +13,21 @@ body {
   color: #333;
   background-color: #f5f5f5;
 }
-/* ================== NAVBAR ================== */
+
+/* ================= NAVBAR ================= */
 .navbar {
-  position: sticky;          /* stays on top while scrolling */
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
-
-  background: #025fc2a8; /* transparent black */
-  backdrop-filter: blur(8px);     /* frosted glass effect */
+  background: #025fc2a8;
+  backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Logo Section */
 #nav-logo {
   display: flex;
   align-items: center;
@@ -40,20 +36,16 @@ body {
   font-weight: 600;
   color: #fff;
 }
-
 #nav-logo .logo {
   width: 35px;
   height: 35px;
-  background: url('images/logo.png') no-repeat center center / cover;
+  background: url('images/logo.png') no-repeat center/cover;
   border-radius: 50%;
 }
-
-/* Navigation Links */
 .navbar nav {
   display: flex;
   gap: 25px;
 }
-
 .navbar nav a {
   text-decoration: none;
   color: #fff;
@@ -61,39 +53,23 @@ body {
   transition: color 0.3s, border-bottom 0.3s;
   padding-bottom: 5px;
 }
-
-/* Active & Hover State */
 .navbar nav a:hover,
 .navbar nav a.active {
-  color: #ffb703;                /* highlight color */
+  color: #ffb703;
   border-bottom: 2px solid #ffb703;
 }
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-  .navbar nav {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .navbar nav a {
-    padding: 8px 0;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
 }
-
 
 /* ================= HERO ================= */
 #hero {
   position: relative;
   height: 100vh;
-  background: url("images/hero_img.jpg") no-repeat center/cover;
+  background: url("images/hero_img.jpg") no-repeat center center / cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +98,7 @@ body {
 }
 .btn-primary {
   padding: 12px 25px;
-  background: #007BFF; /* BLUE */
+  background: #007BFF;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -151,7 +127,7 @@ body {
 .category-cards {
   display: flex;
   justify-content: center;
-  gap: 30px; /* ✅ More spacing */
+  gap: 30px;
   flex-wrap: wrap;
 }
 .category-card {
@@ -218,9 +194,6 @@ body {
   border-radius: 6px;
   width: 100%;
 }
-.booking-form input[type="range"] {
-  cursor: pointer;
-}
 #price-display {
   text-align: center;
   font-weight: bold;
@@ -267,12 +240,6 @@ body {
   padding: 60px 20px;
   text-align: center;
 }
-.newsletter h2 {
-  margin-bottom: 10px;
-}
-.newsletter p {
-  margin-bottom: 20px;
-}
 .newsletter form {
   display: flex;
   justify-content: center;
@@ -318,4 +285,74 @@ body {
 }
 .footer .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* ================= RESPONSIVENESS ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .category-card {
+    flex: 1 1 calc(45% - 20px);
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  .navbar nav.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  #hero {
+    height: 70vh;
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .category-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .testimonial {
+    max-width: 100%;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .btn-primary {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  .newsletter input {
+    width: 100%;
+  }
 }

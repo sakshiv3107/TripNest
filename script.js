@@ -56,3 +56,6 @@ if (window.location.pathname.includes("thankyou.html")) {
   document.getElementById("booking-price").textContent =
     `$${localStorage.getItem("price") || "0"}`;
 }
+function toggleMenu() {
+  document.querySelector(".navbar nav").classList.toggle("active");
+}
