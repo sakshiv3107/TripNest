@@ -1,4 +1,4 @@
-/* General Reset */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -7,380 +7,317 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
-  /* background-color: #f5f5f5; */
+  background-color: #f5f5f5;
 }
-/*Navbar*/
-.navbar{
-  height: 4.5rem;
+
+/* ================= NAVBAR ================= */
+/* ================== NAVBAR ================== */
+.navbar {
+  position: sticky;          /* stays on top while scrolling */
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: #f7f1e9eb;
-  color: rgb(0, 0, 0);
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0px;
-  padding: 0 2%;
-  z-index: 1000;
-  box-shadow: 0px 0px 50px 0px #555;
+  padding: 15px 40px;
+
+  background: rgba(48, 48, 48, 0.785); /* transparent black */
+  backdrop-filter: blur(8px);     /* frosted glass effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-#nav-logo{
-  height: 50px;
-  width: 180px;
+/* Logo Section */
+#nav-logo {
   display: flex;
-  margin-right: 5px;
-
-}
-
-.logo{
-  background-image: url("/images/travel-logo.png");
-  background-size: 6.5em;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  /* margin-top:7px ; */
-}
-#nav-logo p{
-  font-size: 1.7rem;
-  margin-top: 5px;
-}
-.navbar a{
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  transition: all 0.2s ease-in-out 0.1s;
-  margin: 0 15px;
-  font-weight: 400;
-}
-.navbar a:hover{
-  color: #4273f1;
-  font-size: 1rem;
-  /* text-decoration: underline; */
-}
-
-header{
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  align-items: center;
+  gap: 10px;
   font-size: 1.5rem;
-  /* background-color: #007BFF; */
-  /* color: #000000; */
-  /* height: 0vh; */
+  font-weight: 600;
+  color: #fff;
 }
 
-header .heading{
-  padding-top: 8%;
-  color: #016fe5;
+#nav-logo .logo {
+  width: 35px;
+  height: 35px;
+  background: url('/images/logo.png') no-repeat center/cover;
+  border-radius: 50%;
 }
-.heading p{
-  color: black;
-}
-/*HOME PAGE*/
-/* Hero Section */
 
+/* Navigation Links */
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 5px;
+}
+
+/* Active & Hover State */
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #ffb703;                /* highlight color */
+  border-bottom: 2px solid #ffb703;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+  .navbar nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .navbar nav a {
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+/* ================= HERO ================= */
 #hero {
+  position: relative;
   height: 100vh;
-  background: url("/images/hero_img.jpg")  no-repeat ;
-  background-size: cover;
+  background: url("/images/hero_img.jpg") no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
 }
-
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 .hero-content {
-  background: rgba(0, 0, 0, 0.637);
+  position: relative;
+  z-index: 1;
+  color: #fff;
   padding: 20px;
   border-radius: 10px;
 }
-
-#hero h1 {
+.hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-
-#hero p {
+.hero-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-
 .btn-primary {
-  padding: 10px 20px;
-  background: #2b90fd;
-  color: white;
+  padding: 12px 25px;
+  background: #007BFF; /* BLUE */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  display: inline-block;
 }
-
 .btn-primary:hover {
   background: #035bb9;
+  transform: translateY(-3px);
 }
 
-
-/* Testimonials Section */
-.testimonials {
-  background:  white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.testimonials h2 {
-  color: #007BFF;
-  margin-bottom: 20px;
-}
-
-.testimonial-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.testimonial {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  text-align: left;
-}
-
-.testimonial p {
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-.testimonial span {
-  font-weight: bold;
-  color: #007BFF;
-}
-
-/* Newsletter Section */
-.newsletter {
-  background: #0153ac;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.newsletter h2 {
-  margin-bottom: 10px;
-}
-
-.newsletter p {
-  margin-bottom: 20px;
-}
-
-.newsletter form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.newsletter input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  width: 300px;
-}
-
-.newsletter button {
-  background: white;
-  color: #007BFF;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.newsletter button:hover {
-  background: #032c58;
-  color: white;
-}
-
-/*START EXPLORING PAGE*/
-
-.hero-small {
-  text-align: center;
-  padding: 30px;
-}
-
-.hero-small h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.hero-small p {
-  font-size: 1.2em;
-}
-
-/* Categories Section */
+/* ================= DESTINATIONS ================= */
 .categories {
-  padding: 2% 5%;
-  background-color: #f8f9fa;
+  padding: 60px 5%;
+  background: #f8f9fa;
   text-align: center;
 }
-
 .categories h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #333;
 }
-
 .category-cards {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px; /* ✅ More spacing */
+  flex-wrap: wrap;
 }
-
 .category-card {
-  background: white;
-  border-radius: 8px;
+  background: #fff;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  flex: 1;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  flex: 1 1 calc(30% - 30px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .category-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
-
 .category-card img {
   width: 100%;
-  height: 250px;
+  height: 220px;
   object-fit: cover;
-  object-position: center;
 }
-
 .category-card h3 {
-  margin: 15px;
-  font-size: 1.5em;
+  margin: 20px 20px 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
 }
-
 .category-card p {
-  margin: 0 15px 15px;
-  color: #555;
+  margin: 0 20px 20px;
+  color: #666;
+  font-size: 1rem;
 }
-
-
 .category-card .btn-primary {
-  display: inline-block;
-  margin: 15px;
-  padding: 10px 20px;
-  color: white;
-  background: #007BFF;
-  border-radius: 5px;
-  text-decoration: none;
-  border: none;
+  margin: 0 20px 20px;
+  text-align: center;
 }
 
-.category-card .btn-primary:hover {
-  background: #0056b3;
-}
-
-
-/* Booking Form */
+/* ================= BOOKING FORM ================= */
 .booking-form {
-  background: #e4e4e4ed;
+  background: #f0f0f0;
   padding: 40px 20px;
-  margin: 20px auto;
+  margin: 40px auto;
   width: 90%;
   max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
-
 .booking-form h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #007BFF;
 }
-
 .booking-form form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-
 .booking-form label {
   font-weight: bold;
 }
-
 .booking-form input,
 .booking-form select {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   width: 100%;
 }
-
 .booking-form input[type="range"] {
   cursor: pointer;
 }
-
 #price-display {
   text-align: center;
   font-weight: bold;
   color: #007BFF;
 }
 
-.booking-form button {
-  padding: 10px;
-  background: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  position: relative;
-  left: 240px;
+/* ================= TESTIMONIALS ================= */
+.testimonials {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonials h2 {
+  color: #007BFF;
+  margin-bottom: 30px;
+}
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: left;
+}
+.testimonial p {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.testimonial span {
+  font-weight: bold;
+  color: #007BFF;
 }
 
-.booking-form button:hover {
-  background: #004d40;
+/* ================= NEWSLETTER ================= */
+.newsletter {
+  background: #0153ac;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
 }
-/* Footer */
+.newsletter h2 {
+  margin-bottom: 10px;
+}
+.newsletter p {
+  margin-bottom: 20px;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.newsletter input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  width: 300px;
+}
+.newsletter button {
+  background: #007BFF;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.newsletter button:hover {
+  background: #035bb9;
+}
+
+/* ================= FOOTER ================= */
 .footer {
   background: #0153ac;
   color: white;
   padding: 20px;
   text-align: center;
 }
-
 .footer .social-icons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
 }
-
 .footer .social-icons img {
-  width: 40px;
-  height: 40px;
-  
+  width: 30px;
+  height: 30px;
   transition: transform 0.3s ease;
 }
-
 .footer .social-icons img:hover {
   transform: scale(1.2);
 }
-.confirmation-message{
-  height: 393px;
-  font-size: 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-

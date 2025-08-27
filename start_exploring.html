@@ -17,43 +17,46 @@
       </div>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="#categories">CATEGORIES</a>
-        <a href="#Popular">POPULAR TOURS</a>
+        <a href="#destinations">CATEGORIES</a>
+        <a href="#popular-tours">POPULAR TOURS</a>
         <a href="#plan">PLAN YOUR TRIP</a>
       </nav>
     </div>
-    <div class="heading">
+  </header>
+  <section id="hero" style="background-image:url('/images/explore_bg.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
       <h1>Start Exploring</h1>
       <p>Find the perfect destination for your next journey.</p>
-    </div>
-  </header>
+  </section>
 
-  <!-- Categories Section -->
-
-  <section id="categories" class="categories">
-    <h2 id="Popular">Popular Destinations</h2>
-    <div class="category-cards" >
-      <div class="category-card" >
-        <img src="http://wallpapercave.com/wp/FAX9Jf5.jpg" alt="Paris" >
+  <!-- Popular Destinations -->
+  <section id="destinations" class="categories">
+    <h2>Popular Destinations</h2>
+    <div class="category-cards">
+      <div class="category-card">
+        <img src="http://wallpapercave.com/wp/FAX9Jf5.jpg" alt="Paris">
         <h3>Paris</h3>
         <p>Starting from $899</p>
-        <a href="paris.html"><button class="btn-primary">Explore More</button></a>
+        <a href="paris.html" class="btn-primary">Explore More</a>
       </div>
       <div class="category-card">
         <img src="https://wallpaperaccess.com/full/465754.jpg" alt="Maldives">
         <h3>Maldives</h3>
         <p>Starting from $1299</p>
-        <a href="maldives.html"><button class="btn-primary">Explore More</button></a>
+        <a href="maldives.html" class="btn-primary">Explore More</a>
       </div>
       <div class="category-card">
         <img src="https://wallpaperaccess.com/full/18532.jpg" alt="Tokyo">
         <h3>Tokyo</h3>
         <p>Starting from $999</p>
-        <a href="tokyo.html"><button class="btn-primary">Explore More</button></a>
+        <a href="tokyo.html" class="btn-primary">Explore More</a>
       </div>
     </div>
   </section>
-  <section id="categories" class="categories">
+
+  <!-- Explore by Category -->
+  <section id="explore-category" class="categories">
     <h2>Explore by Category</h2>
     <div class="category-cards">
       <div class="category-card">
@@ -69,7 +72,7 @@
         <a href="beach.html" class="btn-primary">Explore More</a>
       </div>
       <div class="category-card">
-        <img src="images/city-break.jpg" alt="City">
+        <img src="/images/city-break.jpg" alt="City">
         <h3>City Breaks</h3>
         <p>Discover vibrant cities with rich culture and history.</p>
         <a href="city.html" class="btn-primary">Explore More</a>
@@ -77,10 +80,8 @@
     </div>
   </section>
 
-
-
   <!-- Popular Tours Section -->
-  <section id="categories" class="categories">
+  <section id="popular-tours" class="categories">
     <h2>Popular Tours</h2>
     <div class="category-cards">
       <div class="category-card">
@@ -104,28 +105,27 @@
     </div>
   </section>
 
-
   <!-- Plan Your Trip Section -->
   <section class="booking-form" id="plan">
     <h2>Book Your Trip</h2>
-    <form>
+    <form id="booking-form">
       <label for="destination">Destination:</label>
-      <input type="text" id="destination" name="destination" value=""  required >
+      <input type="text" id="destination" name="destination" value="" disabled>
 
       <label for="date">Choose Date:</label>
-      <input type="date" id="date" name="date" min="1-01-2025" required>
+      <input type="date" id="date" name="date" required>
 
       <label for="guests">Number of Guests:</label>
-      <input type="number" id="guests" name="guests" min="1" max="10" required>
+      <input type="number" id="guests" name="guests" min="1" max="10" required placeholder="Enter number of guests">
 
       <label for="price-range">Price Range:</label>
-      <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100" required>
+      <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100" value="2500">
       <p id="price-display">$2500</p>
 
-      <a href="thankyou.html"><button class="book_button">Book Now</button></a>
+      <button type="submit" class="btn-primary">Book Now</button>
     </form>
   </section>
-</main>
+
   <!-- Newsletter Section -->
   <section class="newsletter" id="newsletter">
     <h2>Stay Updated</h2>
@@ -135,9 +135,8 @@
       <button type="submit" class="btn-secondary">Subscribe</button>
     </form>
   </section>
-</main>
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <p>© 2024 Travel World. All rights reserved.</p>
@@ -150,3 +149,4 @@
   </footer>
 </body>
 </html>
+  <script src="script.js"></script>

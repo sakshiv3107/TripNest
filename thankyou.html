@@ -3,100 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You</title>
+  <title>Thank You - TripNest</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+      height: 100vh;
+      background: url("/images/hero_img.jpg") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      /* padding: 20px; */
-      background-color: #f8f9fa;
     }
-    .thank-you-container {
-
-      max-width: 800px;
-      padding: 20px 20px;
-      margin: 5% 20%;
-      /* margin-left: 30%; */
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .confirmation-box {
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
-    h1 {
-      color: #28a745;
+    .confirmation-box h1 {
+      color: #2b90fd;
+      margin-bottom: 15px;
     }
-    .details {
-      margin-top: 20px;
-      text-align: left;
-    }
-    .details p {
+    .confirmation-box p {
       margin: 10px 0;
+      font-size: 1.2rem;
     }
-    .details span {
-      font-weight: bold;
+    .btn-primary {
+      padding: 10px 20px;
+      background: #2b90fd;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s ease;
     }
-    .details button{
-      text-decoration: none ;
-      color: #f8f9fa;
+    .btn-primary:hover {
+      background: #035bb9;
     }
   </style>
 </head>
 <body>
-<header class="header">
-  <div class="navbar">
-    <div id="nav-logo">
-      <div class="logo"></div>
-      <p>TripNest</p>
-    </div>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="start_exploring.html">EXPLORING</a>
-      <a href="#categories">POPULAR PLACES</a>
-      <a href="#plan">PLAN YOUR TRIP</a>
-    </nav>
-  </div>
-</header>
-  <div class="thank-you-container">
-    <h1>Thank You for Your Booking!</h1>
-    <p>Your booking details are as follows:</p>
-    <div class="details">
-      <p><span>Destination:</span> <span id="destination-name"></span></p>
-      <p><span>Date:</span> <span id="booking-date"></span></p>
-      <p><span>Number of Guests:</span> <span id="guest-count"></span></p>
-      <p><span>Price:</span> <span id="booking-price"></span></p>
-    </div>
-    <a href="index.html"><button class="btn-primary">Explore More</button></a>
+  <div class="confirmation-box">
+    <h1>🎉 Thank You for Booking with TripNest!</h1>
+    <p id="destination"></p>
+    <p id="date"></p>
+    <p id="guests"></p>
+    <p id="price"></p>
+    <a href="index.html" class="btn-primary">Back to Home</a>
   </div>
 
-  <!-- Newsletter Section -->
-  <section class="newsletter" id="newsletter">
-    <h2>Stay Updated</h2>
-    <p>Subscribe to our newsletter for exclusive deals and travel tips.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit" class="btn-secondary">Subscribe</button>
-    </form>
-  </section>
-</main>
+  <script>
+    // Retrieve data from localStorage
+    const destination = localStorage.getItem("destination");
+    const date = localStorage.getItem("date");
+    const guests = localStorage.getItem("guests");
+    const price = localStorage.getItem("price");
 
+    // Display the booking details dynamically
+    document.getElementById("destination").textContent = destination 
+      ? `Destination: ${destination}` 
+      : "Destination: Not specified";
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2024 Travel World. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="#"><img src="/images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="/images/twitter.png" alt="Twitter"></a>
-      </div>
-    </div>
-  </footer>
-  <script src="script.js">
-        document.getElementById("destination-name").textContent = localStorage.getItem("destination") || "N/A";
-    document.getElementById("booking-date").textContent = localStorage.getItem("date") || "N/A";
-    document.getElementById("guest-count").textContent = localStorage.getItem("guests") || "N/A";
-    document.getElementById("booking-price").textContent = `$${localStorage.getItem("price") || "0"}`;
+    document.getElementById("date").textContent = date 
+      ? `Date: ${date}` 
+      : "Date: Not specified";
+
+    document.getElementById("guests").textContent = guests 
+      ? `Guests: ${guests}` 
+      : "Guests: Not specified";
+
+    document.getElementById("price").textContent = price 
+      ? `Price: $${price}` 
+      : "Price: Not specified";
+
+    // (Optional) Clear booking info after showing
+    // localStorage.clear();
   </script>
 </body>
 </html>

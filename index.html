@@ -3,67 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Next Adventure Awaits</title>
+  <title>TripNest - Next Adventure Awaits</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Extra Enhancements */
+    html {
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .category-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #ff7b00;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    /* Why Choose Us */
+    .why-choose {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f8f9fa;
+    }
+    .why-choose h2 {
+      margin-bottom: 20px;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .feature {
+      width: 250px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+    .feature i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="navbar">
-      <div id="nav-logo">
-        <div class="logo"></div>
-        <p>TripNest</p>
-      </div>
-      <nav>
-        <a href="index.html">HOME</a>
-        <a href="#categories">CATEGORIES</a>
-        <a href="#destinations">POPULAR DESTINATIONS</a>
-        <a href="Sign_in.html">Sign In</a>
-        <a href="Log_in.html">Log In</a>
-        <a href="#newsletter">CONTACT US</a>
-      </nav>
-    </div>
+  <!-- Navbar should be outside hero -->
+<header class="navbar">
+  <div id="nav-logo">
+    <div class="logo"></div>
+    <p>TripNest</p>
+  </div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="#categories">Popular Destinations</a>
+    <a href="Sign_in.html">Sign Up</a>
+    <a href="Log_in.html">Log In</a>
+    <a href="#newsletter">Contact Us</a>
+  </nav>
+</header>
 
+<!-- Hero Section starts below navbar -->
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Discover Your Next Adventure</h1>
+    <p>Explore breathtaking destinations at unbeatable prices.</p>
+    <a href="start_exploring.html" class="btn-primary">Start Exploring</a>
+  </div>
+</section>
 
-      
-  </div> 
-    <div class="hero-content">
-      <h1>Discover Your Next Adventure</h1>
-      <p>Explore breathtaking destinations at unbeatable prices.</p>
-      <a href="start_exploring.html" class="btn-primary">Start Exploring</a>
-    </div>
-  </section>
 
   <!-- Destinations Section -->
   <main>
-    
     <section id="categories" class="categories">
       <h2>Popular Destinations</h2>
       <div class="category-cards">
         <div class="category-card">
-          <img src="http://wallpapercave.com/wp/FAX9Jf5.jpg" alt="Paris">
+          <img src="http://wallpapercave.com/wp/FAX9Jf5.jpg" alt="Paris Eiffel Tower">
           <h3>Paris</h3>
           <p>Starting from $899</p>
-          <a href="paris.html"><button class="btn-primary">Explore More</button></a>
+          <a href="paris.html" class="btn-primary">Explore More</a>
         </div>
         <div class="category-card">
-          <img src="https://wallpaperaccess.com/full/465754.jpg" alt="Maldives">
+          <img src="https://wallpaperaccess.com/full/465754.jpg" alt="Maldives Beach Resort">
           <h3>Maldives</h3>
           <p>Starting from $1299</p>
-          <a href="maldives.html"><button class="btn-primary">Explore More</button></a>
+          <a href="maldives.html" class="btn-primary">Explore More</a>
         </div>
         <div class="category-card">
-          <img src="https://wallpaperaccess.com/full/18532.jpg" alt="Tokyo">
+          <img src="https://wallpaperaccess.com/full/18532.jpg" alt="Tokyo City Lights">
           <h3>Tokyo</h3>
           <p>Starting from $999</p>
-          <a href="tokyo.html"><button class="btn-primary">Explore More</button></a>
+          <a href="tokyo.html" class="btn-primary">Explore More</a>
         </div>
       </div>
     </section>
 
-    
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+      <h2>Why Choose TripNest?</h2>
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-dollar-sign"></i>
+          <h3>Best Prices</h3>
+          <p>Get unbeatable deals on top destinations worldwide.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Our travel experts are always ready to help you.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-globe"></i>
+          <h3>Worldwide Coverage</h3>
+          <p>Explore adventures across the globe with ease.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
@@ -78,7 +173,7 @@
           <span>- John D.</span>
         </div>
         <div class="testimonial">
-          <p>"Maldives was a dream come true, thanks to this site."</p>
+          <p>"Maldives was a dream come true, thanks to TripNest."</p>
           <span>- Sarah K.</span>
         </div>
       </div>
@@ -95,13 +190,14 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <p>© 2024 Travel World. All rights reserved.</p>
+      <p>© 2024 TripNest. All rights reserved.</p>
       <div class="social-icons">
-        <a href="#"><img src="/images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="/images/twitter.png" alt="Twitter"></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
       </div>
     </div>
   </footer>

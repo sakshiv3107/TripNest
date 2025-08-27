@@ -1,152 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    height: 100vh;
-  background: url("/images/hero_img.jpg")  no-repeat ;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-.register-cont {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    background-color: #393939;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - TripNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.register-cont h2 {
-    text-align: center;
-}
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      background: url("/images/hero_img.jpg") no-repeat center center/cover;
+    }
 
-.input-group {
-    margin-bottom: 20px;
-}
+    .register-cont {
+      width: 350px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 12px;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1s ease;
+    }
 
-.input-group p {
-    display: block;
-    margin-bottom: 10px;
-}
+    .register-cont h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00c3ff;
+    }
 
-.input-group input {
-    width: 93%;
-    height: 18px;
-    padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    .input-group {
+      margin-bottom: 18px;
+      position: relative;
+    }
 
-#register-btn {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
-    background-color: #0015ff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .input-group i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
 
-#register-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-.link {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-}
+    .input-group input {
+      width: 100%;
+      padding: 12px 12px 12px 40px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
 
+    .input-group input:focus {
+      border: 2px solid #00c3ff;
+    }
 
-.two{
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
-}
-.two input[type=text]{
-    float: right;
-    padding: 8px;
-    border: none;
-    margin-top: 17px;
-    margin-right: 16px;
-    font-size: 17px;
-}
-.two a{
-    float: left;
-    display: block;
-    color: rgb(255, 255, 255);
-    background-color: black;
-    text-align: center;
-    padding: 23px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.two a:hover{
-    color: white;
-    background-color: black;
-}
-.two a.active{
-    color: white;
-    background-color: black;
-}
-.two a.right{
-    float: right;
-}
-.two img{
-    float: left;
-    padding-top: 8px;
-    width: 150px;
-}
+    #register-btn {
+      width: 100%;
+      padding: 12px;
+      background: #00c3ff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-    </style>
+    #register-btn:hover {
+      background: #0086b3;
+    }
+
+    .link {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-
 <body>
-    
-    <div class="register-cont">
-        <h2>Register</h2>
-        <form id="register-form">
-            <div class="input-group">
-                <p>Username:</p>
-                <input type="text" id="username">
-            </div>
-            <div class="input-group">
-                <p>Email:</p>
-                <input type="email" id="email">
-            </div>
-            <div class="input-group">
-                <p>Date of Birth:</p>
-                <input type="date" id="dob">
-            </div>
-            <div class="input-group">
-                <p>Password:</p>
-                <input type="password" id="password">
-            </div>
-            <div class="input-group">
-                <p>Confirm Password:</p>
-                <input type="password" id="confirm-password">
-            </div>
-            <a href="index.html"><input type="button" id="register-btn" value="Register" onclick='valform()'></a>
-            <a href="Log_in.html" class="link">Already have an account? Login</a>
-        </form>
-    </div>
+
+  <div class="register-cont">
+    <h2>Create Account</h2>
+    <form id="register-form">
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" id="username" placeholder="Username" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-calendar"></i>
+        <input type="date" id="dob" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-lock"></i>
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+      </div>
+
+      <button type="submit" id="register-btn">Register</button>
+      <a href="Log_in.html" class="link">Already have an account? Login</a>
+    </form>
+  </div>
+
+  <script>
+    const registerForm = document.getElementById("register-form");
+
+    registerForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const dob = document.getElementById("dob").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      if (!username || !email || !dob || !password || !confirmPassword) {
+        alert("⚠️ Please fill in all fields.");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("❌ Passwords do not match.");
+        return;
+      }
+
+      if (password.length < 6) {
+        alert("🔒 Password must be at least 6 characters.");
+        return;
+      }
+
+      alert("✅ Registration successful!");
+      // Redirect after successful registration
+      window.location.href = "index.html";
+    });
+  </script>
+
 </body>
 </html>
